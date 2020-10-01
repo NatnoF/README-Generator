@@ -20,4 +20,15 @@ inquirer.prompt([
     console.log(answers);
     const generatedFile = generateMarkdown(answers);
 
+    // fs.writeFile("README.md", generatedFile, function(err)
+    // {
+    //     if (err)
+    //     {
+    //         throw err;
+    //     }
+    //     else
+    //     {
+    //         console.log("Successfully Created your README file!");
+    //     }
+    // });
 });
