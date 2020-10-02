@@ -29,8 +29,7 @@ MIT
 Fork the repo, then create a branch, push to your branch and create a pull request.
 
 ## Tests
-To run tests use the following command 
-> npm test
+There are no ways to run tests.
 
 ## Questions
 Have any questions? Reach out to me at nico.fontan1@gmail.com or https://github.com/NatnoF
