@@ -5,6 +5,8 @@
 ## Description 
 This project will generate a clean and nice looking README.md file for your project. It will ask you a series of questions pertaining to you and your project, then will arrange the informating accordingly.
 
+![](demonstration.gif)
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
