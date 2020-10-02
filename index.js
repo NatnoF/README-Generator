@@ -56,56 +56,60 @@ inquirer.prompt([
     console.log(answers);
     if (answers.license == "Apache License 2.0")
     {
-        answers.license = "Apache%202.0";
+        answers.licenseBadge = "Apache%202.0";
     }
     else if (answers.license == "GNU General Public License v3.0")
     {
-        answers.license = "GPLv3";
+        answers.licenseBadge = "GPLv3";
     }
     else if (answers.license == "BSD 2-Clause 'Simplified' License")
     {
-        answers.license = "BSD%202-";
+        answers.licenseBadge = "BSD%202-";
     }
     else if (answers.license == "BSD 3-Clause 'New' or 'Revised' License")
     {
-        answers.license = "BSD%203-";
+        answers.licenseBadge = "BSD%203-";
     }
     else if (answers.license == "Boost Software License 1.0")
     {
-        answers.license = "Boost%201.0";
+        answers.licenseBadge = "Boost%201.0";
     }
     else if (answers.license == "Creative Commons Zero v1.0 Universal")
     {
-        answers.license = "CC0%201.0";
+        answers.licenseBadge = "CC0%201.0";
     }
     else if (answers.license == "Eclipse Public License 2.0")
     {
-        answers.license = "EPL%201.0";
+        answers.licenseBadge = "EPL%201.0";
     }
     else if (answers.license == "GNU Affero Genral Public License v3.0")
     {
-        answers.license = "AGPL%20v3";
+        answers.licenseBadge = "AGPL%20v3";
     }
     else if (answers.license == "GNU General Public License v2.0")
     {
-        answers.license = "GPL%20v2";
+        answers.licenseBadge = "GPL%20v2";
     }
     else if (answers.license == "Mozilla Public License 2.0")
     {
-        answers.license = "MPL%202.0";
+        answers.licenseBadge = "MPL%202.0";
+    }
+    else
+    {
+        answers.licenseBadge = answers.license;
     }
 
     const generatedFile = generateMarkdown(answers);
 
-    // fs.writeFile("README.md", generatedFile, function(err)
-    // {
-    //     if (err)
-    //     {
-    //         throw err;
-    //     }
-    //     else
-    //     {
-    //         console.log("Successfully Created your README file!");
-    //     }
-    // });
+    fs.writeFile("README.md", generatedFile, function(err)
+    {
+        if (err)
+        {
+            throw err;
+        }
+        else
+        {
+            console.log("Successfully Created your README file!");
+        }
+    });
 });
