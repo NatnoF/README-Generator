@@ -101,7 +101,7 @@ inquirer.prompt([
 
     const generatedFile = generateMarkdown(answers);
 
-    fs.writeFile("README.md", generatedFile, function(err)
+    fs.writeFile("README-2.md", generatedFile, function(err)
     {
         if (err)
         {
